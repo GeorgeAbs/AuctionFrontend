@@ -1,0 +1,22 @@
+<div>
+  @if(catalog !==undefined){
+
+  @for(category of catalog.categories; track category.id){
+  <p>{{category.displayedName}}</p>
+
+    @for(cat of category.childrenCategories; track cat.id){
+    <p class="second">{{cat.displayedName}}</p>
+
+      @for(cat2 of cat.childrenCategories; track cat2.id){
+      <p class="third">{{cat2.displayedName}}</p>
+
+        @for(cat3 of cat2.childrenCategories; track cat3.id){
+        <p>{{cat3.displayedName}}</p>
+        }
+      }
+    }
+  }
+
+  }
+
+</div>

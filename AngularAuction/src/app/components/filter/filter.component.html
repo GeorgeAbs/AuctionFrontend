@@ -1,0 +1,14 @@
+<div>
+  <p>{{thisName}}_122</p>
+  <button (click)="onCl()"></button>
+  @if(paginationWithFilter !== undefined){
+  <p>123456</p>
+  @for(str of paginationWithFilter.catalogFilter.listCatalogFilterStringProperties; track str.displayedName){
+  <p>{{str.displayedName}}</p>
+  @for(val of str.propertyItems; track val.catalogItemPropertyId){
+  <p>__________{{val.value}}</p>
+  }
+  }
+  }
+
+</div>
